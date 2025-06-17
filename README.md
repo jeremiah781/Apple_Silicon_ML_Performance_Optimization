@@ -1,4 +1,4 @@
-# Apple Silicon Stable Diffusion Optimizer
+# Stable Diffusion **Edge Optimizer** for Apple Silicon
 
 <!-- headline badges – scaled to 28 px tall -->
 <p>
