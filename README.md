@@ -60,15 +60,30 @@ This work was selected for presentation as a research poster at **Penn State AI 
 ## Quick Start
 
 ```bash
-# Clone the repository
+# 1. Clone the repository
 git clone https://github.com/jeremiah781/Apple-Silicon-ML-Performance-Optimization.git
 cd Apple-Silicon-ML-Performance-Optimization
 
-# Create and activate the Conda environment
+# 2. Create and activate the Conda environment
 conda env create -f environment.yml
 conda activate m1_sd_opt
 
-# Run an optimized inference pass
+# Add your Hugging Face token
+cp .env.example .env                    # copy template
+echo 'HF_TOKEN=YOUR_TOKEN_HERE' >> .env
+source .env                             # or let your shell load it
+
+# Install a secret-scanning pre-commit hook
+pip install pre-commit
+pre-commit install                      # enables detect-secrets on every commit
+
+
+Optional M-series GPU utilisation
+The scripts call powermetrics for real-time GPU %.
+Run with sudo -E python stable_diffusion.py … if you want this metric.
+Without sudo, the value is silently recorded as 0 %—everything else still works.
+
+# 3. Run an optimized inference pass
 python optimize_inference.py \
   --prompt "A photo of the Nittany Lion statue in a cyberpunk city" \
   --steps 50
