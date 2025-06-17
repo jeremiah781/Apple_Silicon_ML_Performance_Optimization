@@ -44,3 +44,6 @@ python optimize_inference.py
 ## Note
 
 The project is ongoing. This poster, presented at Penn State AI Week, captures a meaningful milestone in its development.
+
+## Tested on macOS 14.4 · Python 3.11 · PyTorch 2.3 (MPS backend)
+
