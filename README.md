@@ -8,7 +8,7 @@
 </p>
 
 
-> **Result:** End-to-end inference latency for Stable Diffusion reduced from 95s to **62s** on a baseline Apple M1.
+> **Result:** End-to-end inference latency for Stable Diffusion reduced from 110s to **71s** on a baseline Apple M1.
 
 ---
 
