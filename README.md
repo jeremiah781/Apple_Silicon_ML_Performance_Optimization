@@ -2,9 +2,13 @@
 
 # 🚀 Apple Silicon Stable Diffusion Optimizer
 
-![Target Chip](https://img.shields.io/badge/Target-Apple%20M1-blue)
-![Latency Reduction](https://img.shields.io/badge/Latency-Reduced%20by%2035%25-green)
-![Status](https://img.shields.io/badge/Status-Ongoing%20Research-informational)
+<!-- headline badges – scaled to 28 px tall -->
+<p>
+  <img src="https://img.shields.io/badge/Target-Apple%20M1-blue"                 height="28">
+  <img src="https://img.shields.io/badge/Latency-Reduced%20by%2035%25-green"    height="28">
+  <img src="https://img.shields.io/badge/Status-Ongoing%20Research-informational" height="28">
+</p>
+
 
 > **Result:** End-to-end inference latency for Stable Diffusion reduced from 95s to **62s** on a baseline Apple M1.
 
@@ -45,7 +49,13 @@ This work was selected for presentation as a research poster at **Penn State AI 
 
 ---
 
-## Tested on: macOS 14.4 · Python 3.11 · PyTorch 2.3 (MPS backend) 
+## Tested on: <!-- Tested-on badges -->
+<p>
+  <img src="https://img.shields.io/badge/macOS-14.4-black?logo=apple&logoColor=white"  height="28">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white" height="28">
+  <img src="https://img.shields.io/badge/PyTorch-2.3%20(MPS)-ee4c2c?logo=pytorch&logoColor=white" height="28">
+</p>
+
 
 ---
 
