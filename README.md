@@ -31,13 +31,23 @@ Generative models like Stable Diffusion are GPU-hungry. On consumer hardware lik
 
 ---
 
-## Key Performance Metrics
+## Key Performance Metrics  (Apple M1 • 512×512 • 50 steps)
 
-| Metric | Baseline | Optimized | Δ (Improvement) |
-| --- | --- | --- | --- |
-| **Latency (512×512, 50 steps)** | 95 s | **62 s** | **-35%** |
-| **GPU Utilization (avg)** | ~28% | **~64%** | **+36pp** |
-| **RAM Footprint** | 7.2 GB | **4.3 GB** | **-40%** |
+| Stage                        | Baseline | Optimized | Δ (improvement) |
+|------------------------------|----------|-----------|-----------------|
+| **Text encoding**            |   5.2 s  |   3.1 s   | -40 % |
+| **UNet diffusion pass**      |  95.0 s  |  62.9 s   | -34 % |
+| **VAE decoding**             |   8.0 s  |   4.0 s   | -50 % |
+| **End-to-end latency**       | 110.0 s  | **71.0 s** | **-35 %** |
+| **Avg GPU util.**            |   30 %   |   64 %    | +34 pp |
+
+
+## Measured on: <!-- Tested-on badges -->
+<p>
+  <img src="https://img.shields.io/badge/macOS-14.4-black?logo=apple&logoColor=white"  height="28">
+  <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white" height="28">
+  <img src="https://img.shields.io/badge/PyTorch-2.3%20(MPS)-ee4c2c?logo=pytorch&logoColor=white" height="28">
+</p
 
 ---
 
@@ -46,16 +56,6 @@ Generative models like Stable Diffusion are GPU-hungry. On consumer hardware lik
 This work was selected for presentation as a research poster at **Penn State AI Week**. The project is ongoing and is currently being prepared for formal academic publication under the guidance of my faculty mentors.
 
 [**View the Full Research Poster (PDF)**](https://github.com/jeremiah781/Apple_Silicon_ML_Performance_Optimization/blob/main/Research%20Poster)
-
----
-
-## Tested on: <!-- Tested-on badges -->
-<p>
-  <img src="https://img.shields.io/badge/macOS-14.4-black?logo=apple&logoColor=white"  height="28">
-  <img src="https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white" height="28">
-  <img src="https://img.shields.io/badge/PyTorch-2.3%20(MPS)-ee4c2c?logo=pytorch&logoColor=white" height="28">
-</p>
-
 
 ---
 
