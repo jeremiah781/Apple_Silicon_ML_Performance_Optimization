@@ -1,6 +1,4 @@
-
-
-# 🚀 Apple Silicon Stable Diffusion Optimizer
+# Apple Silicon Stable Diffusion Optimizer
 
 <!-- headline badges – scaled to 28 px tall -->
 <p>
